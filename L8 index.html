@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Website</title>
+    <style>
+        /* Default Color Scheme */
+        body {
+            background-color: white;
+            color: black;
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Color Scheme for Color Blindness */
+        body.colorblind {
+            background-color: #F0F4F8; /* Light blue background */
+            color: #4A5568; /* Dark gray text */
+        }
+    </style>
+</head>
+<body >
+    <!-- Image with Alt Text -->
+    <img src="im.jpg" alt="Three accessibility features">
+    
+    <!-- Font Size Changing Buttons -->
+    <button onclick="increaseFontSize()">Increase Font Size</button>
+    <button onclick="decreaseFontSize()">Decrease Font Size</button>
+    
+    <!-- Color Blind Mode Button -->
+    <button onclick="toggleColorblind()">Toggle Colorblind Mode</button>
+    
+    <p>Three accessibility features</p>
+
+    <script>
+        function increaseFontSize() {
+            document.body.style.fontSize = '20px'; // Increase font size to 20px
+        }
+
+        function decreaseFontSize() {
+            document.body.style.fontSize = '12px'; // Decrease font size to 12px
+        }
+
+        function toggleColorblind() {
+            document.body.classList.toggle('colorblind'); // Toggle colorblind class
+        }
+    </script>
+</body>
+</html>
